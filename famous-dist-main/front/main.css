@@ -1,0 +1,165 @@
+:root {
+    --bg: #fff;
+    --text: #382b22;
+    --light-color: #cef6ed;
+    --ori-color: #b7ded3;
+    --dark-color: #309a7a;
+    --color-border: #85adb1;
+    --color-shadow: #4d5858;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+    
+  
+  body {
+    font-family: 'KCCChassam';
+    font-size: 1.5rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:url('https://th.bing.com/th/id/R.a5affd23e664df51180f1f69cfb85ce8?rik=7YQzWLeDcdPdaw&riu=http%3a%2f%2fblogfiles.naver.net%2f20150430_245%2faaaa3707_1430369364185IBigp_JPEG%2f%25BE%c6%b8%25A7%25B4%d9%bf%25EE_%25C7%d8%ba%25AF_%25B9%d9%b4%d9%bb%25E7%25C1%25F8_1970834.jpg&ehk=XDNVNtNYe7qjwHfD3YDHk%2f%2f36uCX6b%2btgq14Cpevy0k%3d&risl=&pid=ImgRaw&r=0');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    align-items: center; /* 세로 가운데 정렬 */
+    max-width: 1200px; /* 최대 너비 */
+    margin: 0 auto; /* 양옆 여백 자동 조절 */
+  }
+   
+  .div-chat, .div-map {
+    flex-basis: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+    
+  .main-button {
+      margin: 10px 0;
+      padding: 10px 20px;
+      font-size: 35px;
+      margin-right: 20px;
+      border-radius: 5px;
+      background-color: #ccc;
+      border: none;
+      cursor: pointer;
+  }
+    
+  .description {
+      display: block;
+      margin: 60px 0 0 0;
+      font-size: 30px bold;
+      color: #000000;
+      white-space: nowrap;
+  }
+  
+  
+  /*3D 버튼 구현 */
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: inherit;
+    font-family: inherit;
+  }
+  
+  button.main-button {
+    font-weight: 600;
+    color: var(--text);
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: var(--light-color);
+    border: 2px solid var(--color-border);
+    border-radius: 0.75em;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1) background 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  
+  button.main-button::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--dark-color);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px var(--color-border), 0 0.625em 0 0 var(--color-shadow);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+  }
+  button.main-button:hover {
+    background: var(--ori-color);
+    transform: translate(0, 0.25em);
+  }
+  
+  button.main-button:hover::before {
+    box-shadow: 0 0 0 2px var(--color-border), 0 0.5em 0 0 var(--color-shadow);
+    transform: translate3d(0, 0.5em, -1em);
+  }
+  
+  button.main-button:active {
+    background: var(--ori-color);
+    transform: translate(0em, 0.75em);
+  }
+  
+  button.main-button:active::before {
+    box-shadow: 0 0 0 2px var(--color-border), 0 0 var(--color-shadow);
+    transform: translate3d(0, 0, -1em);
+  }
+  
+  /* 반응형 웹*/
+  @media screen and (max-width: 1000px) {
+      .container {
+        flex-direction: column;
+      }
+    
+      .div-chat, .div-map {
+        flex-basis: 100%;
+      }
+      .description {
+        white-space: normal;
+      }
+    }
+  
+  /*폰트*/
+  @font-face {
+    font-family: 'KCCChassam';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+
+
+  
+
+

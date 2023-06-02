@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="index.css">
+    <link rel = "stylesheet" href="map.css">
+</head>
+<body>
+    <nav>
+        <div class="inner">
+          <div class="nav-container">
+            <h1 class="nav-title"><a href="./main.html">제주얼리</a></h1>
+  
+            <div class="sign-container">
+              <!-- 비회원 -->
+              <div class="unsigned">
+                <a href="./signin.html">로그인/회원가입</a>
+              </div>
+  
+              <!-- 회원 -->
+              <div class="signed hidden">
+                <div class="dropdown">
+                  <div class="dropdown-button">
+                    안녕하세요. <span class="nickname"></span>님.
+                  </div>
+                  <div class="dropdown-content">
+                    <button id="sign-out">로그아웃</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    <main>
+        <section id="category">
+            <div class="inner">
+                <div class="category-container">
+                 <h2 class = "category-title"> 관심있는 카테고리를 선택해보세요</h2>
+                 <div class="category-list">
+                    <button class="category-item" id = "restaurant">음식점</button>
+                    <button class="category-item" id = "cafe">카페</button>
+                    <button class="category-item" id = "olleh">올레길</button>
+                    <button class="category-item" id = "oreum">오름</button>
+                    <button class="category-item" id = "exhibition">전시회</button>
+                    <button class="category-item" id = "seaview">바다</button>
+                    <button class="category-item" id = "shop">기념품점</button>
+                    <button class="category-item" id = "etc">기타</button>
+                  </div>
+              </div>    
+          </div>
+        </section>
+        <!-- 카테고리-->
+             <div id="map" class="inner"></div>
+       
+       
+        <!-- 카카오지도-->
+    </main>
+
+    
+
+    <script
+     type="text/javascript" 
+     src="//dapi.kakao.com/v2/maps/sdk.js?appkey=0efe593efd9b2b7ee0169a87cdde7830&libraries=services"
+    ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.3/axios.min.js" 
+        integrity="sha512-wS6VWtjvRcylhyoArkahZUkzZFeKB7ch/MHukprGSh1XIidNvHG1rxPhyFnL73M0FC1YXPIXLRDAoOyRJNni/g==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    ></script>
+    <script src="axios-script.js"></script>
+    <script src="header.js"></script> 
+  </body>
+</html>
